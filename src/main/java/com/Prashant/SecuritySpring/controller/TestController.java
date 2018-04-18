@@ -13,11 +13,11 @@ public class TestController {
     @GetMapping(value = "/test")
     public String getTest(@AuthenticationPrincipal UserDetails userDetails){
         String currentUser=userDetails.getUsername();
-        return "Hello User";
+        return "Hello From User";
         }
 
         @GetMapping(value = "/admin")
     public String getForAdmin(){
-        return "Hello Admin";
+        return "Hello From Admin";
         }
 }
